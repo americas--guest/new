@@ -15,7 +15,7 @@ class Category < ActiveRecord::Base
   }
 
   def self.with_projects
-    where("exists(select true from projects p where p.category_id = categories.id and p.state not in('draft', 'rejected'))")
+    where("exists(select true from projects p where p.category_id = categories.id and p.state not in('draft', 'accepted'))")
   end
 
   def self.array

@@ -3,8 +3,8 @@ en:
     collections:
       project:
         traffic_sources:
-          one: "I already had another campaign in JVN"
-          two: "Indication of a person who has already had a campaign in JVN"
+          one: "I already had another campaign in Boss Brims"
+          two: "Indication of a person who has already had a campaign in Boss Brims"
           three: "Friend / colleague / professional contact"
           four: "From a campaign he was capturing on the platform"
           five: "Article in a blog"
@@ -14,7 +14,7 @@ en:
           nine: "Other"
     validation_texts:
       reward:
-        minimum_value: "Enter a minimum value greater than or equal to 10"
+        minimum_value: "Enter a minimum value greater than or equal base price"
         description: "Please provide a description for the reward"
       bank_account:
         input_bank_number: "Invalid bank number"
@@ -40,11 +40,11 @@ en:
       project:
         category: "Select a category"
         select: "select an option"
-        traffic_sources: "How did you know about JVN?"
+        traffic_sources: "How did you know about Boss Brims?"
     hints:
       flexible_project:
         select: "select an option"
-        traffic_sources: "How did you know about JVN?"
+        traffic_sources: "How did you know about Boss Brims?"
         name: "Give a name that people will remember easily. Do not exceed 50 characters."
         all_tags: "Report tags separated by commas"
         all_public_tags: "List up to 5 keywords related to your campaign and help backers to discover you. "
@@ -52,14 +52,14 @@ en:
         category: "Choose the one that best fits your campaign."
         city: "Where will your campaign be carried out? If it happens in more than one place, one tip is to put the city where your network of potential supporters is larger."
         goal: "Plan a goal that is consistent with what your campaign proposes. Review your budget and be sure to include the 13% fee charged by JVN"
-        online_days: "You can choose between 1 and 60 days for your campaign. Check out the filmmakers' guide for timeline tips."
+        online_days: "14 days or less for campaign. Always be selling."
         video_url: "Link to your video on Vimeo or <br />Youtube."
-        about_html: "Speak with passion and clarity about what will be accomplished. Clarify possible questions about how the money will be used, who is behind the campaign, how and when the campaign will be delivered. Transparency attracts more supporters. Remember: your campaign will be accessed by ordinary people who will decide whether or not to support your campaign."
+        about_html: "Got to give the people what they want. Clarify possible questions about how the money will be used, who is behind the campaign, how and when the campaign will be delivered. Transparency attracts more supporters. Remember: your campaign will be accessed by ordinary people who will decide whether or not to support your campaign."
         headline: "Phrase in the campaign card to call supporters. Must have a maximum of 100 characters and summarize the campaign well."
         uploaded_image: "This image will be used as the thumbnail of your campaign (PNG, JPG size 600 x 340)"
       project:
         select: "select an option"
-        traffic_sources: "How did you know about JVN?"
+        traffic_sources: "How did you know about Boss Brims?"
         name: "Give a name that people will remember easily. Do not exceed 50 characters."
         all_tags: "Report tags separated by commas"
         all_public_tags: "List up to 5 keywords related to your campaign & help backers to discover you."

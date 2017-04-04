@@ -1,0 +1,699 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://rawgit.com/kangax/fabric.js/master/dist/fabric.min.js"></script>
+
+
+<input type="file" id="file">
+<input type="color" value="blue" id="fill" />
+<select id="font">
+  <option>arial</option>
+  <option>tahoma</option>
+  <option>times new roman</option>
+
+
+
+
+</select>
+<button onclick="addText()">Add Custom Text</button>
+<br />
+<canvas id="canvas" width="750" height="550"></canvas>
+<a href='' id='txt' target="_blank">Submit!!</a>
+<br />
+
+
+<input type="image" id="toggle107" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_black_frontangle_nosticker" />
+
+<input type="image" id="toggle108" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_darknavy_frontangle_nosticker" />
+
+<input type="image" id="toggle109" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_darkgrey_frontangle_nosticker" />
+
+<input type="image" id="toggle110" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_camo_frontangle_nosticker" />
+
+<input type="image" id="toggle111" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_heather_frontangle_nosticker" />
+
+<input type="image" id="toggle112" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_maroon_frontangle_nosticker" />
+
+<input type="image" id="toggle113" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_natural_frontangle_nosticker" />
+
+<input type="image" id="toggle114" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_navy_frontangle_nosticker" />
+
+<input type="image" id="toggle115" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_orange_frontangle_nosticker" />
+
+<input type="image" id="toggle116" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_purple_frontangle_nosticker" />
+
+<input type="image" id="toggle117" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_red_frontangle_nosticker" />
+
+<input type="image" id="toggle118" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_royal_frontangle_nosticker" />
+
+<input type="image" id="toggle119" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_spruce_frontangle_nosticker" />
+
+<input type="image" id="toggle120" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_silver_frontangle_nosticker" />
+
+<input type="image" id="toggle121" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blackneongreen_frontpage_sticker" />
+
+<input type="image" id="toggle122" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blackneonorange_frontpage_sticker" />
+
+<input type="image" id="toggle123" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blackneonpink_frontpage_sticker" />
+
+<input type="image" id="toggle124" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blackpurple_frontpage_sticker" />
+
+<input type="image" id="toggle125" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blackred_frontpage_sticker" />
+
+<input type="image" id="toggle126" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blacksilver_frontpage_sticker" />
+
+<input type="image" id="toggle127" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blackteal_frontpage_sticker" />
+
+<input type="image" id="toggle128" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_black_frontangle_sticker" />
+
+<input type="image" id="toggle129" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_royal_frontangle_sticker" />
+
+<input type="image" id="toggle130" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_peppergreen_frontangle_sticker" />
+
+<input type="image" id="toggle131" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_orange_frontangle_sticker" />
+
+<input type="image" id="toggle132" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_khaki_frontangle_sticker" />
+
+<input type="image" id="toggle133" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_gold_frontangle_sticker" />
+
+<input type="image" id="toggle134" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_carolinablue_frontangle_sticker" />
+
+<input type="image" id="toggle135" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-black_1__24688.1476978362.500.400" />
+
+<input type="image" id="toggle136" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-light-gray_1__07378.1476799609.1250.1000" />
+
+<input type="image" id="toggle137" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-red-white_1__75992.1476977572.500.400" />
+
+<input type="image" id="toggle138" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-royal-blue_1__69666.1476985239.1250.1000" />
+
+<input type="image" id="toggle139" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-white-red_1__36189.1476888058.1250.1000" />
+
+<input type="image" id="toggle140" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-white-navy-blue_1__79322.1476974564.1250.1000" />
+
+<input type="image" id="toggle141" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-white-royal-blue_1__48952.1476972731.1250.1000" />
+
+<input type="image" id="toggle142" style="height:200px;width:200px;" src="https://s3.amazonaws.com/bossbrims/kraken-1489539364031/wholesale-foam-front-mesh-flat-bill--trucker-hats-bkc-2999-white-black_1__80164.1470757618.1250.1000" />
+
+
+
+
+
+
+<img id="preview" />
+
+
+<script>
+var canvas = new fabric.Canvas('canvas');
+document.getElementById('file').addEventListener("change", function (e) {
+  var file = e.target.files[0];
+  var reader = new FileReader();
+  console.log("reader   " + reader);
+  reader.onload = function (f) {
+    var data = f.target.result;
+    fabric.Image.fromURL(data, function (img) {
+      var oImg = img.set({left: 70, top: 100, width: 250, height: 200, angle: 0}).scale(0.9);
+      canvas.add(oImg).renderAll();
+      canvas.setActiveObject(oImg);  
+    });
+  };
+  reader.readAsDataURL(file);
+});
+var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_camo_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};
+$('#fill').change(function(){
+  var obj = canvas.getActiveObject();
+  if(obj){
+    obj.setFill($(this).val());
+  }
+  canvas.renderAll();
+});
+$('#font').change(function(){
+  var obj = canvas.getActiveObject();
+  if(obj){
+    obj.setFontFamily($(this).val());
+  }
+  canvas.renderAll();
+});
+function addText() {
+  var oText = new fabric.IText('Tap and Type', { 
+    left: 100, 
+    top: 100 ,
+  });
+  canvas.add(oText);
+  canvas.setActiveObject(oText);
+  $('#fill, #font').trigger('change');
+  oText.bringToFront();
+}
+document.querySelector('#txt').onclick = function (e) {
+  e.preventDefault();
+  canvas.deactivateAll().renderAll();
+  document.querySelector('#preview').src = canvas.toDataURL();
+};
+fabric.util.addListener(document.getElementById('toggle107'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_black_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle108'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_darknavy_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle109'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_darkgrey_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle110'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_camo_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle111'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_heather_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle112'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_maroon_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle113'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_natural_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle114'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_navy_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle115'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_orange_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle116'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_purple_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle117'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_red_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle118'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_royal_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle119'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_spruce_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle120'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489189616709/6089m_silver_frontangle_nosticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle121'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blackneongreen_frontpage_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle122'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blackneonorange_frontpage_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle123'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blackneonpink_frontpage_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle124'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blackpurple_frontpage_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle125'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blackred_frontpage_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle126'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blacksilver_frontpage_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle127'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489347445902/6089mt_blackteal_frontpage_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle128'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_black_frontangle_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle129'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_royal_frontangle_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle130'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_peppergreen_frontangle_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle131'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_orange_frontangle_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle132'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_khaki_frontangle_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle133'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_gold_frontangle_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle134'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489349611015/6277_carolinablue_frontangle_sticker";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle135'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-black_1__24688.1476978362.500.400";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle136'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-light-gray_1__07378.1476799609.1250.1000";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle137'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-red-white_1__75992.1476977572.500.400";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle138'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-royal-blue_1__69666.1476985239.1250.1000";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle139'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-white-red_1__36189.1476888058.1250.1000";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle140'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-white-navy-blue_1__79322.1476974564.1250.1000";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle141'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489539364031/bk-caps-flat-bill-blank-plain-5-panel-trucker-snapback-hats-same-color-underbill-2998-white-royal-blue_1__48952.1476972731.1250.1000";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+fabric.util.addListener(document.getElementById('toggle142'), 'click', function () {
+     {
+        var img = new Image();
+img.crossOrigin = "anonymous";  // important - set crossOrigin before src!
+img.src = "https://s3.amazonaws.com/bossbrims/kraken-1489539364031/wholesale-foam-front-mesh-flat-bill--trucker-hats-bkc-2999-white-black_1__80164.1470757618.1250.1000";
+img.onload = function(){
+  canvas.setBackgroundImage(new fabric.Image(img, {
+    originX: 'left',
+    originY: 'top',
+    left: 0,
+    top: 0
+  }), canvas.renderAll.bind(canvas));
+};      
+    }
+});
+</script>
